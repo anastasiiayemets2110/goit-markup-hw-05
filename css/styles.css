@@ -504,6 +504,7 @@ img {
 .footer-send {
     display: flex;
     gap: 24px;
+    align-items: flex-start;
 }
 
 .send-mail {
@@ -514,7 +515,8 @@ img {
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     padding-right: 24px;
-    position: absolute; 
+    position: absolute;
+    margin-left: 0;
     bottom: 0;
     font-size: 12px;
     line-height: 2;
@@ -529,6 +531,7 @@ img {
     justify-content: center;
     flex-direction: row;
     gap: 16px;
+    position: absolute;
     background-color: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
@@ -538,6 +541,7 @@ img {
     color: #fff;
     border-radius: 4px;
     padding: 8px 24px;
+    margin-right: 0;
     min-width: 165px;
     height: 40px;
     cursor: pointer;
@@ -563,8 +567,8 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* opacity: 0;
-    pointer-events: none; */
+    opacity: 0;
+    pointer-events: none;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
@@ -576,8 +580,9 @@ img {
 .modal {
     position: absolute;
     border-radius: 4px;
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%); 
     width: 408px;
     min-height: 584px; 
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
@@ -716,13 +721,20 @@ img {
     height: 16px;
     border-radius: 2px;
     border: 1px solid rgba(46, 47, 66, 0.4);
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 8px;
+    fill: transparent;
 }
 
-/* .check-icon {
+
+.modal-check:checked + .check-label span {
+    background-color: #404bbf;
+    border: none;
     fill: #f4f4fd;
-} */
+}
+
 
 .modal-field-check {
     display: flex;

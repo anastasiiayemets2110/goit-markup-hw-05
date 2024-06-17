@@ -504,8 +504,10 @@ img {
 .footer-send {
     display: flex;
     gap: 24px;
-    align-items: flex-start;
+    position: absolute;
+    bottom: 0;
 }
+
 
 .send-mail {
     border: 1px solid #fff;
@@ -515,9 +517,9 @@ img {
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     padding-right: 24px;
-    position: absolute;
-    margin-left: 0;
     bottom: 0;
+    margin-left: 0;
+    margin-bottom: 16px;
     font-weight: 400;
     font-size: 12px;
     line-height: 2;
@@ -532,7 +534,7 @@ img {
     justify-content: center;
     flex-direction: row;
     gap: 16px;
-    position: absolute;
+    position: relative;
     background-color: #4d5ae5;
     font-weight: 500;
     font-size: 16px;
@@ -717,7 +719,7 @@ img {
     align-items: center;
 }
 
-.check-label span {
+.accept-check-icon {
     width: 16px;
     height: 16px;
     border-radius: 2px;
@@ -727,10 +729,11 @@ img {
     justify-content: center;
     margin-right: 8px;
     fill: transparent;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
-.modal-check:checked + .check-label span {
+.modal-check:checked + .accept-check-icon {
     background-color: #404bbf;
     border: none;
     fill: #f4f4fd;

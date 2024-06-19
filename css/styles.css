@@ -4,7 +4,7 @@ body {
     background-color: #FFF;
 }
 
-p, ul, h1,h2,h3,h4,h5,h6 {
+p, ul, h1,h2,h3,h4,h5,h6, p {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -530,7 +530,6 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: row;
-    gap: 16px;
     position: relative;
     background-color: #4d5ae5;
     font-weight: 500;
@@ -630,7 +629,6 @@ img {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    margin-top: 23px;
     margin-bottom: 16px;
 }
 
@@ -658,7 +656,6 @@ img {
     border-radius: 4px;
     background-color: transparent;
     padding-left: 38px;
-    margin-bottom: 8px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
@@ -682,6 +679,7 @@ img {
     border-radius: 4px;
     outline: transparent;
     resize: none;
+    display: block;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -736,12 +734,6 @@ img {
 
 
 .modal-field-check {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 8px;
-    padding-top: 16px;
     margin-bottom: 24px;
 }
 
